@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0107d194-c3fa-41cb-b881-5d0b060655a5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +21,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="c23037255 &lt;hockleyb@cardiff.ac.uk&gt;" />
+        <option value="Ben Hockley" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -37,7 +43,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/c23037255/IdeaProjects/IdeaProjects/BroCode/JOptionPane",
+    "last_opened_file_path": "C:/Users/c23037255/IdeaProjects/IdeaProjects/BroCode/TextField",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -53,8 +59,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709582576991</updated>
-      <workItem from="1709582578493" duration="623000" />
+      <workItem from="1709582578493" duration="2165000" />
     </task>
+    <task id="LOCAL-00001" summary="Created new class Calculator extends JFrame.">
+      <created>1709583438408</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709583438408</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,5 +109,9 @@
         <entry key="9df17609-6b7e-4c62-b9bc-f3bd2d9c77ff" value="TOOL_WINDOW" />
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created new class Calculator extends JFrame." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created new class Calculator extends JFrame." />
   </component>
 </project>
