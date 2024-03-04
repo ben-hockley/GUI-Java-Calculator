@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0107d194-c3fa-41cb-b881-5d0b060655a5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +43,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/c23037255/IdeaProjects/IdeaProjects/BroCode/ArrayLists",
+    "last_opened_file_path": "C:/Users/c23037255/IdeaProjects/IdeaProjects/BroCode/Panels",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -59,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709582576991</updated>
-      <workItem from="1709582578493" duration="12125000" />
+      <workItem from="1709582578493" duration="12870000" />
     </task>
     <task id="LOCAL-00001" summary="Created new class Calculator extends JFrame.">
       <created>1709583438408</created>
@@ -103,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709592930850</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added title to calculator">
+      <created>1709594940669</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709594940669</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +159,7 @@
     <MESSAGE value="When clicked,number buttons now append to a string builder which is displayed in the screen of the calculator." />
     <MESSAGE value="Added functionality to buttons" />
     <MESSAGE value="Debug so calculations can be done on result" />
-    <option name="LAST_COMMIT_MESSAGE" value="Debug so calculations can be done on result" />
+    <MESSAGE value="Added title to calculator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added title to calculator" />
   </component>
 </project>
