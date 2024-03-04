@@ -3,12 +3,15 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class Calculator extends JFrame {
+
+    StringBuilder input;
+    JLabel screen;
     Calculator(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(520,540);
 
         //StringBuilder to hold user input.
-        StringBuilder input = new StringBuilder();
+        input = new StringBuilder();
         int[] value = new int[1]; //used array so can be accessed in lambda expression.
         ArrayList<Integer> inputs = new ArrayList<>(); //list of numbers input
         ArrayList<Character> operators = new ArrayList<>(); //list of operators used.
@@ -22,7 +25,7 @@ public class Calculator extends JFrame {
         screenContainer.setBounds(0,0,500,100);
         screenContainer.setBackground(Color.gray);
 
-        JLabel screen = new JLabel("SCREEN");
+        screen = new JLabel("SCREEN");
         screen.setBackground(Color.black);
         screen.setForeground(Color.white);
         screen.setFont(new Font("Consolas",Font.PLAIN,100));

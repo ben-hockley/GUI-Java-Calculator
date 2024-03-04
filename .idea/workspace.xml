@@ -59,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709582576991</updated>
-      <workItem from="1709582578493" duration="10214000" />
+      <workItem from="1709582578493" duration="12125000" />
     </task>
     <task id="LOCAL-00001" summary="Created new class Calculator extends JFrame.">
       <created>1709583438408</created>
@@ -96,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709591772970</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Debug so calculations can be done on result">
+      <created>1709592930850</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709592930850</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +151,7 @@
     <MESSAGE value="Added buttons to buttons panel." />
     <MESSAGE value="When clicked,number buttons now append to a string builder which is displayed in the screen of the calculator." />
     <MESSAGE value="Added functionality to buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added functionality to buttons" />
+    <MESSAGE value="Debug so calculations can be done on result" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debug so calculations can be done on result" />
   </component>
 </project>
