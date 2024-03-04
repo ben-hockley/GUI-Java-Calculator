@@ -59,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709582576991</updated>
-      <workItem from="1709582578493" duration="2165000" />
+      <workItem from="1709582578493" duration="3464000" />
     </task>
     <task id="LOCAL-00001" summary="Created new class Calculator extends JFrame.">
       <created>1709583438408</created>
@@ -68,7 +68,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709583438408</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Created two JPanels to hold Calculator screen and buttons.">
+      <created>1709584940326</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709584940326</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,6 +119,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created new class Calculator extends JFrame." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created new class Calculator extends JFrame." />
+    <MESSAGE value="Created two JPanels to hold Calculator screen and buttons." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created two JPanels to hold Calculator screen and buttons." />
   </component>
 </project>
