@@ -6,10 +6,24 @@ public class Calculator extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(520,540);
 
+        //StringBuilder to hold user input.
+        StringBuilder input = new StringBuilder();
+
+
+
+
+        //GUI
         //Calculator screen
         JPanel screenContainer = new JPanel(new GridLayout(1,1,0,0));
         screenContainer.setBounds(0,0,500,100);
         screenContainer.setBackground(Color.gray);
+
+        JLabel screen = new JLabel("SCREEN");
+        screen.setBackground(Color.black);
+        screen.setForeground(Color.white);
+        screen.setFont(new Font("Consolas",Font.PLAIN,100));
+
+        screenContainer.add(screen);
 
         //Calculator buttons
         JPanel buttonsContainer = new JPanel(new GridLayout(4,4,0,0));
@@ -35,6 +49,47 @@ public class Calculator extends JFrame {
         JButton bDIVIDE = new JButton("÷");
         JButton bEQUALS = new JButton("=");
         JButton bCLEAR = new JButton("C");
+
+        b1.addActionListener(e-> {
+            input.append(1);
+            screen.setText(input.toString());
+        });
+        b2.addActionListener(e-> {
+            input.append(2);
+            screen.setText(input.toString());
+        });
+        b3.addActionListener(e-> {
+            input.append(3);
+            screen.setText(input.toString());
+        });
+        b4.addActionListener(e-> {
+            input.append(4);
+            screen.setText(input.toString());
+        });
+        b5.addActionListener(e-> {
+            input.append(5);
+            screen.setText(input.toString());
+        });
+        b6.addActionListener(e-> {
+            input.append(6);
+            screen.setText(input.toString());
+        });
+        b7.addActionListener(e-> {
+            input.append(7);
+            screen.setText(input.toString());
+        });
+        b8.addActionListener(e-> {
+            input.append(8);
+            screen.setText(input.toString());
+        });
+        b9.addActionListener(e-> {
+            input.append(9);
+            screen.setText(input.toString());
+        });
+        b0.addActionListener(e-> {
+            input.append(0);
+            screen.setText(input.toString());
+        });
 
         //add buttons to 4x4 Grid Layout
         buttonsContainer.add(b7);

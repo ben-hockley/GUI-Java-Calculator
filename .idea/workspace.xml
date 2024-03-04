@@ -43,7 +43,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/c23037255/IdeaProjects/IdeaProjects/BroCode/TextField",
+    "last_opened_file_path": "C:/Users/c23037255/IdeaProjects/IdeaProjects/Practice/GUI-Calculator",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -59,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709582576991</updated>
-      <workItem from="1709582578493" duration="3464000" />
+      <workItem from="1709582578493" duration="4798000" />
     </task>
     <task id="LOCAL-00001" summary="Created new class Calculator extends JFrame.">
       <created>1709583438408</created>
@@ -75,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709584940326</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added buttons to buttons panel.">
+      <created>1709586293225</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709586293225</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,6 +127,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created new class Calculator extends JFrame." />
     <MESSAGE value="Created two JPanels to hold Calculator screen and buttons." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created two JPanels to hold Calculator screen and buttons." />
+    <MESSAGE value="Added buttons to buttons panel." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added buttons to buttons panel." />
   </component>
 </project>
