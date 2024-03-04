@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class Calculator extends JFrame {
     Calculator(){
@@ -8,6 +9,9 @@ public class Calculator extends JFrame {
 
         //StringBuilder to hold user input.
         StringBuilder input = new StringBuilder();
+        int[] value = new int[1]; //used array so can be accessed in lambda expression.
+        ArrayList<Integer> inputs = new ArrayList<>(); //list of numbers input
+        ArrayList<Character> operators = new ArrayList<>(); //list of operators used.
 
 
 
@@ -50,6 +54,7 @@ public class Calculator extends JFrame {
         JButton bEQUALS = new JButton("=");
         JButton bCLEAR = new JButton("C");
 
+        //Adding functionality to buttons
         b1.addActionListener(e-> {
             input.append(1);
             screen.setText(input.toString());
@@ -89,6 +94,58 @@ public class Calculator extends JFrame {
         b0.addActionListener(e-> {
             input.append(0);
             screen.setText(input.toString());
+        });
+
+        bADD.addActionListener(e-> {
+            value[0] = Integer.parseInt(input.toString());
+            inputs.add(value[0]);
+            input.setLength(0);
+            operators.add('+');
+        });
+        bSUBTRACT.addActionListener(e-> {
+            value[0] = Integer.parseInt(input.toString());
+            inputs.add(value[0]);
+            input.setLength(0);
+            operators.add('-');
+        });
+        bMULTIPLY.addActionListener(e-> {
+            value[0] = Integer.parseInt(input.toString());
+            inputs.add(value[0]);
+            input.setLength(0);
+            operators.add('*');
+        });
+        bDIVIDE.addActionListener(e-> {
+            value[0] = Integer.parseInt(input.toString());
+            inputs.add(value[0]);
+            input.setLength(0);
+            operators.add('/');
+        });
+        bEQUALS.addActionListener(e-> {
+            inputs.add(Integer.parseInt(input.toString()));
+            input.setLength(0);
+            value[0] = inputs.get(0); //set value to first value entered.
+            for (int i=0;i<operators.size();i++){
+                if (operators.get(i) == '+'){
+                    value[0] += inputs.get(i+1);
+                } else if (operators.get(i) == '-') {
+                    value[0] -= inputs.get(i+1);
+                } else if (operators.get(i) == '*') {
+                    value[0] *= inputs.get(i+1);
+                } else if (operators.get(i) == '/') {
+                    value[0] /= inputs.get(i+1);
+                }
+            }
+            screen.setText(String.valueOf(value[0]));
+            //clear arrayLists for new calculation
+            inputs.clear();
+            operators.clear();
+        });
+        bCLEAR.addActionListener(e-> {
+            input.setLength(0); //clear stringBuilder
+            value[0] = 0;
+            inputs.clear(); //clear arrayLists.
+            operators.clear();
+            screen.setText(""); //clear screen
         });
 
         //add buttons to 4x4 Grid Layout
