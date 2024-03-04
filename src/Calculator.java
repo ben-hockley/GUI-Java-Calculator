@@ -97,25 +97,34 @@ public class Calculator extends JFrame {
         });
 
         bADD.addActionListener(e-> {
-            value[0] = Integer.parseInt(input.toString());
+            //if statement so first list value defaults to current result if no number entered.
+            if (input.length() != 0){
+                value[0] = Integer.parseInt(input.toString());
+            }
             inputs.add(value[0]);
             input.setLength(0);
             operators.add('+');
         });
         bSUBTRACT.addActionListener(e-> {
-            value[0] = Integer.parseInt(input.toString());
+            if (input.length() != 0){
+                value[0] = Integer.parseInt(input.toString());
+            }
             inputs.add(value[0]);
             input.setLength(0);
             operators.add('-');
         });
         bMULTIPLY.addActionListener(e-> {
-            value[0] = Integer.parseInt(input.toString());
+            if (input.length() != 0){
+                value[0] = Integer.parseInt(input.toString());
+            }
             inputs.add(value[0]);
             input.setLength(0);
             operators.add('*');
         });
         bDIVIDE.addActionListener(e-> {
-            value[0] = Integer.parseInt(input.toString());
+            if (input.length() != 0){
+                value[0] = Integer.parseInt(input.toString());
+            }
             inputs.add(value[0]);
             input.setLength(0);
             operators.add('/');
