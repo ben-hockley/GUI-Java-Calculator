@@ -12,8 +12,8 @@ public class Calculator extends JFrame {
 
         //StringBuilder to hold user input.
         input = new StringBuilder();
-        int[] value = new int[1]; //used array so can be accessed in lambda expression.
-        ArrayList<Integer> inputs = new ArrayList<>(); //list of numbers input
+        double[] value = new double[1]; //used array so can be accessed in lambda expression.
+        ArrayList<Double> inputs = new ArrayList<>(); //list of numbers input
         ArrayList<Character> operators = new ArrayList<>(); //list of operators used.
 
 
@@ -33,7 +33,7 @@ public class Calculator extends JFrame {
         screenContainer.add(screen);
 
         //Calculator buttons
-        JPanel buttonsContainer = new JPanel(new GridLayout(4,4,0,0));
+        JPanel buttonsContainer = new JPanel(new GridLayout(5,4,0,0));
         buttonsContainer.setBounds(0,100,500,400);
         buttonsContainer.setBackground(Color.blue);
 
@@ -56,6 +56,9 @@ public class Calculator extends JFrame {
         JButton bDIVIDE = new JButton("÷");
         JButton bEQUALS = new JButton("=");
         JButton bCLEAR = new JButton("C");
+
+        //decimal point
+        JButton bDECIMAL = new JButton(".");
 
         //Adding functionality to buttons
         b1.addActionListener(e-> {
@@ -99,10 +102,15 @@ public class Calculator extends JFrame {
             screen.setText(input.toString());
         });
 
+        bDECIMAL.addActionListener(e->{
+            input.append(".");
+            screen.setText(input.toString());
+        });
+
         bADD.addActionListener(e-> {
             //if statement so first list value defaults to current result if no number entered.
             if (input.length() != 0){
-                value[0] = Integer.parseInt(input.toString());
+                value[0] = Double.parseDouble(input.toString());
             }
             inputs.add(value[0]);
             input.setLength(0);
@@ -110,7 +118,7 @@ public class Calculator extends JFrame {
         });
         bSUBTRACT.addActionListener(e-> {
             if (input.length() != 0){
-                value[0] = Integer.parseInt(input.toString());
+                value[0] = Double.parseDouble(input.toString());
             }
             inputs.add(value[0]);
             input.setLength(0);
@@ -118,7 +126,7 @@ public class Calculator extends JFrame {
         });
         bMULTIPLY.addActionListener(e-> {
             if (input.length() != 0){
-                value[0] = Integer.parseInt(input.toString());
+                value[0] = Double.parseDouble(input.toString());
             }
             inputs.add(value[0]);
             input.setLength(0);
@@ -126,14 +134,14 @@ public class Calculator extends JFrame {
         });
         bDIVIDE.addActionListener(e-> {
             if (input.length() != 0){
-                value[0] = Integer.parseInt(input.toString());
+                value[0] = Double.parseDouble(input.toString());
             }
             inputs.add(value[0]);
             input.setLength(0);
             operators.add('/');
         });
         bEQUALS.addActionListener(e-> {
-            inputs.add(Integer.parseInt(input.toString()));
+            inputs.add(Double.parseDouble(input.toString()));
             input.setLength(0);
             value[0] = inputs.get(0); //set value to first value entered.
             for (int i=0;i<operators.size();i++){
@@ -180,6 +188,8 @@ public class Calculator extends JFrame {
         buttonsContainer.add(bCLEAR);
         buttonsContainer.add(bDIVIDE);
         buttonsContainer.add(bEQUALS);
+
+        buttonsContainer.add(bDECIMAL);
 
 
 
