@@ -36,6 +36,7 @@ public class Calculator extends JFrame {
         JPanel buttonsContainer = new JPanel(new GridLayout(5,4,0,0));
         buttonsContainer.setBounds(0,100,500,400);
         buttonsContainer.setBackground(Color.blue);
+        buttonsContainer.setFont(new Font("Consolas",Font.PLAIN,100));
 
         //numbers
         JButton b1 = new JButton("1");
@@ -52,15 +53,44 @@ public class Calculator extends JFrame {
         //operations
         JButton bADD = new JButton("+");
         JButton bSUBTRACT = new JButton("-");
-        JButton bMULTIPLY = new JButton("X");
+        JButton bMULTIPLY = new JButton("×");
         JButton bDIVIDE = new JButton("÷");
         JButton bEQUALS = new JButton("=");
         JButton bCLEAR = new JButton("C");
+        JButton bDEL = new JButton("DEL");
 
         //decimal point
         JButton bDECIMAL = new JButton(".");
 
+
+        //format buttons
+        b1.setFont(new Font("Consolas",Font.BOLD,50));
+        b2.setFont(new Font("Consolas",Font.BOLD,50));
+        b3.setFont(new Font("Consolas",Font.BOLD,50));
+        b4.setFont(new Font("Consolas",Font.BOLD,50));
+        b5.setFont(new Font("Consolas",Font.BOLD,50));
+        b6.setFont(new Font("Consolas",Font.BOLD,50));
+        b7.setFont(new Font("Consolas",Font.BOLD,50));
+        b8.setFont(new Font("Consolas",Font.BOLD,50));
+        b9.setFont(new Font("Consolas",Font.BOLD,50));
+        b0.setFont(new Font("Consolas",Font.BOLD,50));
+        bADD.setFont(new Font("Consolas",Font.BOLD,50));
+        bSUBTRACT.setFont(new Font("Consolas",Font.BOLD,50));
+        bMULTIPLY.setFont(new Font("Consolas",Font.BOLD,50));
+        bDIVIDE.setFont(new Font("Consolas",Font.BOLD,50));
+        bCLEAR.setFont(new Font("Consolas",Font.BOLD,50));
+        bEQUALS.setFont(new Font("Consolas",Font.BOLD,50));
+        bDEL.setFont(new Font("Consolas",Font.BOLD,50));
+        bDECIMAL.setFont(new Font("Consolas",Font.BOLD,50));
+
+        bADD.setBackground(Color.orange);
+        bSUBTRACT.setBackground(Color.orange);
+        bMULTIPLY.setBackground(Color.orange);
+        bDIVIDE.setBackground(Color.orange);
+        bEQUALS.setBackground(Color.orange);
+        bCLEAR.setBackground(Color.green);
         //Adding functionality to buttons
+
         b1.addActionListener(e-> {
             input.append(1);
             screen.setText(input.toString());
@@ -104,6 +134,10 @@ public class Calculator extends JFrame {
 
         bDECIMAL.addActionListener(e->{
             input.append(".");
+            screen.setText(input.toString());
+        });
+        bDEL.addActionListener(e->{
+            input.deleteCharAt(input.length()-1);
             screen.setText(input.toString());
         });
 
@@ -169,10 +203,15 @@ public class Calculator extends JFrame {
         });
 
         //add buttons to 4x4 Grid Layout
+        buttonsContainer.add(bCLEAR);
+        buttonsContainer.add(new JLabel());
+        buttonsContainer.add(new JLabel());
+        buttonsContainer.add(bDIVIDE);
+
         buttonsContainer.add(b7);
         buttonsContainer.add(b8);
         buttonsContainer.add(b9);
-        buttonsContainer.add(bADD);
+        buttonsContainer.add(bMULTIPLY);
 
         buttonsContainer.add(b4);
         buttonsContainer.add(b5);
@@ -182,14 +221,13 @@ public class Calculator extends JFrame {
         buttonsContainer.add(b1);
         buttonsContainer.add(b2);
         buttonsContainer.add(b3);
-        buttonsContainer.add(bMULTIPLY);
+        buttonsContainer.add(bADD);
 
         buttonsContainer.add(b0);
-        buttonsContainer.add(bCLEAR);
-        buttonsContainer.add(bDIVIDE);
+        buttonsContainer.add(bDECIMAL);
+        buttonsContainer.add(bDEL);
         buttonsContainer.add(bEQUALS);
 
-        buttonsContainer.add(bDECIMAL);
 
 
 

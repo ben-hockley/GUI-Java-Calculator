@@ -63,7 +63,8 @@
       <option name="presentableId" value="Default" />
       <updated>1709582576991</updated>
       <workItem from="1709582578493" duration="13630000" />
-      <workItem from="1709623513521" duration="998000" />
+      <workItem from="1709623513521" duration="1599000" />
+      <workItem from="1709629109084" duration="5312000" />
     </task>
     <task id="LOCAL-00001" summary="Created new class Calculator extends JFrame.">
       <created>1709583438408</created>
@@ -128,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709595748485</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added decimal point button and changed int types to double to hold non-integer values.">
+      <created>1709624564061</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1709624564061</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +189,7 @@
     <MESSAGE value="Added title to calculator" />
     <MESSAGE value="Added ImageIcon to calculator." />
     <MESSAGE value="Added Calculator image file to git." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Calculator image file to git." />
+    <MESSAGE value="Added decimal point button and changed int types to double to hold non-integer values." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added decimal point button and changed int types to double to hold non-integer values." />
   </component>
 </project>
