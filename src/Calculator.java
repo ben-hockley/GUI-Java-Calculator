@@ -6,14 +6,32 @@ public class Calculator extends JFrame {
 
     StringBuilder input;
     JLabel screen;
-    JPanel buttonsContainer = new JPanel(new GridLayout(5,4,0,0));
+    JPanel buttonsContainer;
+    double[] value;
+    ArrayList<Double> inputs;
+    ArrayList<Character> operators;
 
     //method to set settings of each number button and add it to the JPanel.
-    void addButton(JButton buttonName,int value){
+    void addNumberButton(JButton buttonName,int value){
         buttonName.setFont(new Font("Consolas",Font.BOLD,50));
         buttonName.addActionListener(e-> {
             input.append(value);
             screen.setText(input.toString());
+        });
+        buttonsContainer.add(buttonName);
+    }
+
+    void addOperatorButton(JButton buttonName,char operator){
+        buttonName.setFont(new Font("Consolas",Font.BOLD,50));
+        buttonName.setBackground(Color.orange);
+        buttonName.addActionListener(e-> {
+            //if statement so first list value defaults to current result if no number entered.
+            if (input.length() != 0){
+                value[0] = Double.parseDouble(input.toString());
+            }
+            inputs.add(value[0]);
+            input.setLength(0);
+            operators.add(operator);
         });
         buttonsContainer.add(buttonName);
     }
@@ -23,9 +41,9 @@ public class Calculator extends JFrame {
 
         //StringBuilder to hold user input.
         input = new StringBuilder();
-        double[] value = new double[1]; //used array so can be accessed in lambda expression.
-        ArrayList<Double> inputs = new ArrayList<>(); //list of numbers input
-        ArrayList<Character> operators = new ArrayList<>(); //list of operators used.
+        value = new double[1]; //used array so can be accessed in lambda expression.
+        inputs = new ArrayList<>(); //list of numbers input
+        operators = new ArrayList<>(); //list of operators used.
 
 
 
@@ -33,6 +51,7 @@ public class Calculator extends JFrame {
         //GUI
         //Calculator screen
         JPanel screenContainer = new JPanel(new GridLayout(1,1,0,0));
+        buttonsContainer = new JPanel(new GridLayout(5,4,0,0));
         screenContainer.setBounds(0,0,500,100);
         screenContainer.setBackground(Color.gray);
 
@@ -72,19 +91,11 @@ public class Calculator extends JFrame {
         //decimal point
         JButton bDECIMAL = new JButton(".");
 
-        bADD.setFont(new Font("Consolas",Font.BOLD,50));
-        bSUBTRACT.setFont(new Font("Consolas",Font.BOLD,50));
-        bMULTIPLY.setFont(new Font("Consolas",Font.BOLD,50));
-        bDIVIDE.setFont(new Font("Consolas",Font.BOLD,50));
         bCLEAR.setFont(new Font("Consolas",Font.BOLD,50));
         bEQUALS.setFont(new Font("Consolas",Font.BOLD,50));
         bDEL.setFont(new Font("Consolas",Font.BOLD,50));
         bDECIMAL.setFont(new Font("Consolas",Font.BOLD,50));
 
-        bADD.setBackground(Color.orange);
-        bSUBTRACT.setBackground(Color.orange);
-        bMULTIPLY.setBackground(Color.orange);
-        bDIVIDE.setBackground(Color.orange);
         bEQUALS.setBackground(Color.orange);
         bCLEAR.setBackground(Color.green);
         //Adding functionality to buttons
@@ -99,39 +110,6 @@ public class Calculator extends JFrame {
             screen.setText(input.toString());
         });
 
-        bADD.addActionListener(e-> {
-            //if statement so first list value defaults to current result if no number entered.
-            if (input.length() != 0){
-                value[0] = Double.parseDouble(input.toString());
-            }
-            inputs.add(value[0]);
-            input.setLength(0);
-            operators.add('+');
-        });
-        bSUBTRACT.addActionListener(e-> {
-            if (input.length() != 0){
-                value[0] = Double.parseDouble(input.toString());
-            }
-            inputs.add(value[0]);
-            input.setLength(0);
-            operators.add('-');
-        });
-        bMULTIPLY.addActionListener(e-> {
-            if (input.length() != 0){
-                value[0] = Double.parseDouble(input.toString());
-            }
-            inputs.add(value[0]);
-            input.setLength(0);
-            operators.add('*');
-        });
-        bDIVIDE.addActionListener(e-> {
-            if (input.length() != 0){
-                value[0] = Double.parseDouble(input.toString());
-            }
-            inputs.add(value[0]);
-            input.setLength(0);
-            operators.add('/');
-        });
         bEQUALS.addActionListener(e-> {
             inputs.add(Double.parseDouble(input.toString()));
             input.setLength(0);
@@ -164,25 +142,25 @@ public class Calculator extends JFrame {
         buttonsContainer.add(bCLEAR);
         buttonsContainer.add(new JLabel());
         buttonsContainer.add(new JLabel());
-        buttonsContainer.add(bDIVIDE);
+        addOperatorButton(bDIVIDE,'/');
 
-        addButton(b7,7);
-        addButton(b8,8);
-        addButton(b9,9);
-        buttonsContainer.add(bMULTIPLY);
+        addNumberButton(b7,7);
+        addNumberButton(b8,8);
+        addNumberButton(b9,9);
+        addOperatorButton(bMULTIPLY,'*');
 
-        addButton(b4,4);
-        addButton(b5,5);
-        addButton(b6,6);
-        buttonsContainer.add(bSUBTRACT);
+        addNumberButton(b4,4);
+        addNumberButton(b5,5);
+        addNumberButton(b6,6);
+        addOperatorButton(bSUBTRACT,'-');
 
 
-        addButton(b1,1);
-        addButton(b2,2);
-        addButton(b3,3);
-        buttonsContainer.add(bADD);
+        addNumberButton(b1,1);
+        addNumberButton(b2,2);
+        addNumberButton(b3,3);
+        addOperatorButton(bADD,'+');
 
-        addButton(b0,0);
+        addNumberButton(b0,0);
         buttonsContainer.add(bDECIMAL);
         buttonsContainer.add(bDEL);
         buttonsContainer.add(bEQUALS);
