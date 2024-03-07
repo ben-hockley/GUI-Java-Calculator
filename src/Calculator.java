@@ -6,6 +6,17 @@ public class Calculator extends JFrame {
 
     StringBuilder input;
     JLabel screen;
+    JPanel buttonsContainer = new JPanel(new GridLayout(5,4,0,0));
+
+    //method to set settings of each number button and add it to the JPanel.
+    void addButton(JButton buttonName,int value){
+        buttonName.setFont(new Font("Consolas",Font.BOLD,50));
+        buttonName.addActionListener(e-> {
+            input.append(value);
+            screen.setText(input.toString());
+        });
+        buttonsContainer.add(buttonName);
+    }
     Calculator(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(520,540);
@@ -33,7 +44,6 @@ public class Calculator extends JFrame {
         screenContainer.add(screen);
 
         //Calculator buttons
-        JPanel buttonsContainer = new JPanel(new GridLayout(5,4,0,0));
         buttonsContainer.setBounds(0,100,500,400);
         buttonsContainer.setBackground(Color.blue);
         buttonsContainer.setFont(new Font("Consolas",Font.PLAIN,100));
@@ -62,18 +72,6 @@ public class Calculator extends JFrame {
         //decimal point
         JButton bDECIMAL = new JButton(".");
 
-
-        //format buttons
-        b1.setFont(new Font("Consolas",Font.BOLD,50));
-        b2.setFont(new Font("Consolas",Font.BOLD,50));
-        b3.setFont(new Font("Consolas",Font.BOLD,50));
-        b4.setFont(new Font("Consolas",Font.BOLD,50));
-        b5.setFont(new Font("Consolas",Font.BOLD,50));
-        b6.setFont(new Font("Consolas",Font.BOLD,50));
-        b7.setFont(new Font("Consolas",Font.BOLD,50));
-        b8.setFont(new Font("Consolas",Font.BOLD,50));
-        b9.setFont(new Font("Consolas",Font.BOLD,50));
-        b0.setFont(new Font("Consolas",Font.BOLD,50));
         bADD.setFont(new Font("Consolas",Font.BOLD,50));
         bSUBTRACT.setFont(new Font("Consolas",Font.BOLD,50));
         bMULTIPLY.setFont(new Font("Consolas",Font.BOLD,50));
@@ -91,46 +89,6 @@ public class Calculator extends JFrame {
         bCLEAR.setBackground(Color.green);
         //Adding functionality to buttons
 
-        b1.addActionListener(e-> {
-            input.append(1);
-            screen.setText(input.toString());
-        });
-        b2.addActionListener(e-> {
-            input.append(2);
-            screen.setText(input.toString());
-        });
-        b3.addActionListener(e-> {
-            input.append(3);
-            screen.setText(input.toString());
-        });
-        b4.addActionListener(e-> {
-            input.append(4);
-            screen.setText(input.toString());
-        });
-        b5.addActionListener(e-> {
-            input.append(5);
-            screen.setText(input.toString());
-        });
-        b6.addActionListener(e-> {
-            input.append(6);
-            screen.setText(input.toString());
-        });
-        b7.addActionListener(e-> {
-            input.append(7);
-            screen.setText(input.toString());
-        });
-        b8.addActionListener(e-> {
-            input.append(8);
-            screen.setText(input.toString());
-        });
-        b9.addActionListener(e-> {
-            input.append(9);
-            screen.setText(input.toString());
-        });
-        b0.addActionListener(e-> {
-            input.append(0);
-            screen.setText(input.toString());
-        });
 
         bDECIMAL.addActionListener(e->{
             input.append(".");
@@ -208,22 +166,23 @@ public class Calculator extends JFrame {
         buttonsContainer.add(new JLabel());
         buttonsContainer.add(bDIVIDE);
 
-        buttonsContainer.add(b7);
-        buttonsContainer.add(b8);
-        buttonsContainer.add(b9);
+        addButton(b7,7);
+        addButton(b8,8);
+        addButton(b9,9);
         buttonsContainer.add(bMULTIPLY);
 
-        buttonsContainer.add(b4);
-        buttonsContainer.add(b5);
-        buttonsContainer.add(b6);
+        addButton(b4,4);
+        addButton(b5,5);
+        addButton(b6,6);
         buttonsContainer.add(bSUBTRACT);
 
-        buttonsContainer.add(b1);
-        buttonsContainer.add(b2);
-        buttonsContainer.add(b3);
+
+        addButton(b1,1);
+        addButton(b2,2);
+        addButton(b3,3);
         buttonsContainer.add(bADD);
 
-        buttonsContainer.add(b0);
+        addButton(b0,0);
         buttonsContainer.add(bDECIMAL);
         buttonsContainer.add(bDEL);
         buttonsContainer.add(bEQUALS);
